@@ -17,7 +17,7 @@ function simple_check(a, b, c){
         const msg = "<div class='vertical-container'><div>"+ "A and B and C must be defined"+"</div></div>";
         return document.write(msg);
     }
-    let sgnB, sgnC ='';
+    let sgnB = '', sgnC ='';
     if(b > 0){
         sgnB = "\+";
     }    

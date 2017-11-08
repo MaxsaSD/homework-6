@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Strait');
+
+body {
+    font-family: 'Arial Narrow', cursive;    
+    line-height: 1.5em;
+    max-width: 1200px;
+    margin: 0 auto; 
+    background-color: #ccc;
+    font-size: 3em;
+    height:100vh;
+    text-align:center; 
+}
+

@@ -1,6 +1,6 @@
-const a = Number(prompt('Input a'));
-const b = Number(prompt('Input b'));
-const c = Number(prompt('Input c'));
+const a = parseInt(prompt('Input a'));
+const b = parseInt(prompt('Input b'));
+const c = parseInt(prompt('Input c'));
 showQE(a, b, c);
 
 
@@ -18,7 +18,7 @@ function showQE(a, b, c){
         return document.write(msg);
     }
     let sgnB = '', sgnC ='';
-    let digB = b, digC = c;
+    let digB = b+"x", digC = c;
     if(b > 0){
         sgnB = "\+";
     } else if (b === 0){
@@ -26,11 +26,11 @@ function showQE(a, b, c){
     }   
     if(c > 0){
         sgnC = "\+";
-    }  else if (b === 0){
+    }  else if (c === 0){
         digC = '';
     }   
     
-    const msg = a + "x&sup2;" + sgnB + digB + "x" + sgnC + digC + " = 0;"
+    const msg = a + "x&sup2;" + sgnB + digB + sgnC + digC + " = 0;"
     return document.write(msg);
 }
 

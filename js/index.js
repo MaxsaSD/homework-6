@@ -11,12 +11,12 @@ function quadraticEquation(a, b, c) {
     const d = discriminant(a, b, c);
     const ss = Math.sqrt(d);
     if (d > 0) {
-        x1 = (-1 * b - Math.sqrt(d)) / (2 * a);
-        x2 = (-1 * b + Math.sqrt(d)) / (2 * a);
+        x1 = (-b - Math.sqrt(d)) / (2 * a);
+        x2 = (-b + Math.sqrt(d)) / (2 * a);
         return [x1,x2]
     } else 
     if (d === 0){
-        x1 = -1 * b / 2 * a;    
+        x1 = -b / 2 * a;    
         return [x1]
     }
     if (d < 0){

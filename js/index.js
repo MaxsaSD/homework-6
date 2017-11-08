@@ -17,16 +17,12 @@ function simple_check(a, b, c){
         const msg = "<div class='vertical-container'><div>"+ "A and B and C must be defined"+"</div></div>";
         return document.write(msg);
     }
-    let sgnB, sgnC;
+    let sgnB, sgnC ='';
     if(b > 0){
-        sgnB = "+";
-    }{
-        sgnB = '';
+        sgnB = "\+";
     }    
     if(c > 0){
-        sgnC = "+";
-    }else{
-        sgnC = '';
+        sgnC = "\+";
     }     
     const msg = a + "x&sup2;" + sgnB + b + "x" + sgnC + c + " = 0;"
     return document.write(msg);

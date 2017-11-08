@@ -1,7 +1,7 @@
 const a = parseInt(prompt('Input a'));
 const b = parseInt(prompt('Input b'));
 const c = parseInt(prompt('Input c'));
-showQE(a, b, c);
+const msg = showQE(a, b, c);
 
 
 
@@ -11,12 +11,7 @@ prnEq(result);
 
 //ax^2 + bx + c = 0
 
-
 function showQE(a, b, c){
-    if (a===undefined || b===undefined || c===undefined){
-        const msg = "<div class='vertical-container'><div>"+ "A and B and C must be defined"+"</div></div>";
-        return document.write(msg);
-    }
     let sgnB = '', sgnC ='';
     let digB = b+"x", digC = c;
     if(b > 0){
@@ -31,9 +26,8 @@ function showQE(a, b, c){
     }   
     
     const msg = a + "x&sup2;" + sgnB + digB + sgnC + digC + " = 0;"
-    return document.write(msg);
+    return msg;
 }
-
 
 function quadraticEquation(a, b, c) {
     let x1, x2;
@@ -60,7 +54,7 @@ function discriminant(a, b, c) {
 }
 
 function prnEq(val){
-    document.write("<div class='vertical-container'><div>");
+    document.write("<div class='vertical-container'><div>"+msg+"<br>");
     const l = val.length;
     switch(l){
         case 2:

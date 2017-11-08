@@ -3,31 +3,8 @@ const b = parseInt(prompt('Input b'));
 const c = parseInt(prompt('Input c'));
 const msg = showQE(a, b, c);
 
-
-
-
 const result = quadraticEquation(a, b, c);
 prnEq(result);
-
-//ax^2 + bx + c = 0
-
-function showQE(a, b, c){
-    let sgnB = '', sgnC ='';
-    let digB = b+"x", digC = c;
-    if(b > 0){
-        sgnB = "\+";
-    } else if (b === 0){
-        digB = '';
-    }   
-    if(c > 0){
-        sgnC = "\+";
-    }  else if (c === 0){
-        digC = '';
-    }   
-    
-    const msg = a + "x&sup2;" + sgnB + digB + sgnC + digC + " = 0;"
-    return msg;
-}
 
 function quadraticEquation(a, b, c) {
     let x1, x2;
@@ -73,3 +50,19 @@ function prnEq(val){
     document.write("</div></div>");
 }
 
+function showQE(a, b, c){
+    let sgnB = '', sgnC ='';
+    let digB = b+"x", digC = c;
+    if(b > 0){
+        sgnB = "\+";
+    } else if (b === 0){
+        digB = '';
+    }   
+    if(c > 0){
+        sgnC = "\+";
+    }  else if (c === 0){
+        digC = '';
+    }   
+    const msg = a + "x&sup2;" + sgnB + digB + sgnC + digC + " = 0;"
+    return msg;
+}

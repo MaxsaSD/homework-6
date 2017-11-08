@@ -1,8 +1,37 @@
 const a = Number(prompt('Input a'));
 const b = Number(prompt('Input b'));
 const c = Number(prompt('Input c'));
+simple_check(a, b, c);
+
+
+
+
 const result = quadraticEquation(a, b, c);
 prnEq(result);
+
+//ax^2 + bx + c = 0
+
+
+function simple_check(a, b, c){
+    if (a===undefined || b===undefined || c===undefined){
+        const msg = "<div class='vertical-container'><div>"+ "A and B and C must be defined"+"</div></div>";
+        return document.write(msg);
+    }
+    let sgnB, sgnC;
+    if(b > 0){
+        sgnB = "+";
+    }{
+        sgnB = '';
+    }    
+    if(c > 0){
+        sgnC = "+";
+    }else{
+        sgnC = '';
+    }     
+    const msg = a + "x&sup2;" + sgnB + b + "x" + sgnC + c + " = 0;"
+    return document.write(msg);
+}
+
 
 function quadraticEquation(a, b, c) {
     let x1, x2;
@@ -29,16 +58,22 @@ function discriminant(a, b, c) {
 }
 
 function prnEq(val){
+    document.write("<div class='vertical-container'><div>");
     const l = val.length;
-    if (l === 2) {
-        document.write("х Є {" + Math.round(val[0]*100)/100 + " ; " + Math.round(val[1]*100)/100 + "}");    
-    }else
-    if(l === 1){
-        if (val[0] === null){
-            document.write(" No Solution ");    
-        }else{
-            document.write(val[0]);
-        } 
+    switch(l){
+        case 2:
+            document.write("<small>Result</small> <br> x ∈ {" + Math.round(val[0]*100)/100 + " ; " + Math.round(val[1]*100)/100 + "}");
+            break;    
+        case 1:
+            switch (val[0]) {
+                case null:
+                    document.write("No Solution because D < 0");
+                    break;
+                default:
+                    document.write("<small>Result</small> <br> x ∈ {" + val[0] + "}");
+            }
+            break;    
     }
+    document.write("</div></div>");
 }
 

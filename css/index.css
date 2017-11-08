@@ -1,13 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Strait');
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
 
 body {
-    font-family: 'Arial Narrow', cursive;    
+    background: url(../images/bg_math3.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000;
+
+    font-family: 'Schoolbell', sans-serif;    
     line-height: 1.5em;
     max-width: 1200px;
     margin: 0 auto; 
-    background-color: #ccc;
-    font-size: 3em;
-    height:100vh;
-    text-align:center; 
+    font-size: 4.5em;
+    font-weight: 800;
+    text-align:center;
+    color:#fff;
 }
 
+.vertical-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

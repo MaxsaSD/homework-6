@@ -1,7 +1,7 @@
 const a = Number(prompt('Input a'));
 const b = Number(prompt('Input b'));
 const c = Number(prompt('Input c'));
-simple_check(a, b, c);
+showQE(a, b, c);
 
 
 
@@ -12,19 +12,25 @@ prnEq(result);
 //ax^2 + bx + c = 0
 
 
-function simple_check(a, b, c){
+function showQE(a, b, c){
     if (a===undefined || b===undefined || c===undefined){
         const msg = "<div class='vertical-container'><div>"+ "A and B and C must be defined"+"</div></div>";
         return document.write(msg);
     }
     let sgnB = '', sgnC ='';
+    let digB = b, digC = c;
     if(b > 0){
         sgnB = "\+";
-    }    
+    } else if (b === 0){
+        digB = '';
+    }   
     if(c > 0){
         sgnC = "\+";
-    }     
-    const msg = a + "x&sup2;" + sgnB + b + "x" + sgnC + c + " = 0;"
+    }  else if (b === 0){
+        digC = '';
+    }   
+    
+    const msg = a + "x&sup2;" + sgnB + digB + "x" + sgnC + digC + " = 0;"
     return document.write(msg);
 }
 
